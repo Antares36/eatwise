@@ -1,7 +1,7 @@
 {{ define "main" }}
 <section class="hero">
   <div class="container">
-    <img src="/images/logo-with-text.png" alt="EATWISE" class="hero-logo">
+    <img src="{{ "images/logo-with-text.png" | relURL }}" alt="EATWISE" class="hero-logo">
     <p class="hero-subtitle">{{ site.Params.description }}</p>
     <a href="{{ "about/" | relLangURL }}" class="btn btn-primary">
       {{ if eq .Language.Lang "el" }}Μάθετε Περισσότερα{{ else }}Learn More{{ end }}
