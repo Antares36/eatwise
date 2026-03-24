@@ -1,0 +1,51 @@
+<header class="site-header">
+  <div class="top-bar">
+    <div class="container">
+      <div class="social-links">
+        {{ with site.Params.social.facebook }}<a href="{{ . }}" target="_blank" rel="noopener" aria-label="Facebook">FB</a>{{ end }}
+        {{ with site.Params.social.twitter }}<a href="{{ . }}" target="_blank" rel="noopener" aria-label="Twitter">X</a>{{ end }}
+        {{ with site.Params.social.instagram }}<a href="{{ . }}" target="_blank" rel="noopener" aria-label="Instagram">IG</a>{{ end }}
+        {{ with site.Params.social.linkedin }}<a href="{{ . }}" target="_blank" rel="noopener" aria-label="LinkedIn">LI</a>{{ end }}
+        {{ with site.Params.social.youtube }}<a href="{{ . }}" target="_blank" rel="noopener" aria-label="YouTube">YT</a>{{ end }}
+      </div>
+      <div class="lang-switch">
+        {{ range site.Languages }}
+          {{ if eq .Lang $.Language.Lang }}
+            <span class="active">{{ .LanguageName }}</span>
+          {{ else }}
+            {{ with $.Translations }}
+              {{ range . }}
+                {{ if eq .Language.Lang $.Language.Lang | not }}
+                  <a href="{{ .RelPermalink }}">{{ .Language.LanguageName }}</a>
+                {{ end }}
+              {{ end }}
+            {{ else }}
+              <a href="/{{ .Lang }}/">{{ .LanguageName }}</a>
+            {{ end }}
+          {{ end }}
+        {{ end }}
+      </div>
+    </div>
+  </div>
+
+  <nav class="main-nav">
+    <div class="container">
+      <a href="{{ "/" | relLangURL }}" class="logo">
+        <img src="/images/logo.jpg" alt="EatWise Logo" width="50" height="50">
+        <span>EATWISE</span>
+      </a>
+      <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+      <ul class="nav-links">
+        {{ range site.Menus.main }}
+          <li>
+            <a href="{{ .URL }}"{{ if $.IsMenuCurrent "main" . }} class="active"{{ end }}>
+              {{ .Name }}
+            </a>
+          </li>
+        {{ end }}
+      </ul>
+    </div>
+  </nav>
+</header>

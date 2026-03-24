@@ -1,0 +1,40 @@
+<footer class="site-footer">
+  <div class="container">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <img src="/images/logo.jpg" alt="EatWise" width="80" height="80">
+        <p class="footer-tagline">EATWISE</p>
+      </div>
+      <div class="footer-col">
+        <h4>{{ if eq .Language.Lang "el" }}Επικοινωνία{{ else }}Contact{{ end }}</h4>
+        <p><a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a></p>
+        <p>{{ site.Params.university }}</p>
+      </div>
+      <div class="footer-col">
+        <h4>{{ if eq .Language.Lang "el" }}Ακολουθήστε μας{{ else }}Follow Us{{ end }}</h4>
+        <div class="footer-social">
+          {{ with site.Params.social.facebook }}<a href="{{ . }}" target="_blank" rel="noopener">Facebook</a>{{ end }}
+          {{ with site.Params.social.instagram }}<a href="{{ . }}" target="_blank" rel="noopener">Instagram</a>{{ end }}
+          {{ with site.Params.social.twitter }}<a href="{{ . }}" target="_blank" rel="noopener">X / Twitter</a>{{ end }}
+          {{ with site.Params.social.linkedin }}<a href="{{ . }}" target="_blank" rel="noopener">LinkedIn</a>{{ end }}
+          {{ with site.Params.social.youtube }}<a href="{{ . }}" target="_blank" rel="noopener">YouTube</a>{{ end }}
+        </div>
+      </div>
+    </div>
+    <div class="footer-funding">
+      <p>{{ site.Params.funding }}</p>
+    </div>
+    <div class="footer-bottom">
+      <p>&copy; {{ now.Year }} EATWISE &ndash; {{ site.Params.university }}</p>
+    </div>
+  </div>
+</footer>
+
+<script>
+  document.querySelector('.menu-toggle').addEventListener('click', function() {
+    const nav = document.querySelector('.nav-links');
+    const expanded = this.getAttribute('aria-expanded') === 'true';
+    this.setAttribute('aria-expanded', !expanded);
+    nav.classList.toggle('open');
+  });
+</script>

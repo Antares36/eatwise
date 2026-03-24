@@ -1,0 +1,85 @@
+baseURL: "https://eatwise.gr/"
+title: "EATWISE"
+
+defaultContentLanguage: el
+defaultContentLanguageInSubdir: false
+
+languages:
+  el:
+    languageName: "Ελληνικά"
+    languageCode: "el"
+    contentDir: "content/el"
+    weight: 1
+    title: "EATWISE"
+    params:
+      description: "Εκπαίδευση κατά της Σπατάλης: Προώθηση Αλλαγών Συμπεριφοράς για την Υγιή και Βιώσιμη Κατανάλωση Τροφίμων & τη Μείωση των Αποβλήτων Τροφίμων"
+    menus:
+      main:
+        - name: "Αρχική"
+          pageRef: "/"
+          weight: 1
+        - name: "Σχετικά με το Έργο"
+          pageRef: "/about/"
+          weight: 2
+        - name: "Μάθε & Δράσε"
+          pageRef: "/learn/"
+          weight: 3
+        - name: "Για Εκπαιδευτικούς"
+          pageRef: "/educators/"
+          weight: 4
+        - name: "Κέντρο Γνώσης"
+          pageRef: "/knowledge/"
+          weight: 5
+        - name: "Press Corner"
+          pageRef: "/press/"
+          weight: 6
+        - name: "Επικοινωνία"
+          pageRef: "/contact/"
+          weight: 7
+  en:
+    languageName: "English"
+    languageCode: "en"
+    contentDir: "content/en"
+    weight: 2
+    title: "EATWISE"
+    params:
+      description: "Waste Not, Educate All: Promoting Behavioural Change for Healthy and Sustainable Food Consumption and Food Waste Prevention"
+    menus:
+      main:
+        - name: "Home"
+          pageRef: "/"
+          weight: 1
+        - name: "About"
+          pageRef: "/about/"
+          weight: 2
+        - name: "Learn & Take Action"
+          pageRef: "/learn/"
+          weight: 3
+        - name: "For Educators"
+          pageRef: "/educators/"
+          weight: 4
+        - name: "Knowledge Hub"
+          pageRef: "/knowledge/"
+          weight: 5
+        - name: "Press Corner"
+          pageRef: "/press/"
+          weight: 6
+        - name: "Contact"
+          pageRef: "/contact/"
+          weight: 7
+
+params:
+  email: "eatwise@hua.gr"
+  university: "Harokopio University"
+  funding: "Funded by the Hellenic Foundation for Research and Innovation (HFRI)"
+  social:
+    facebook: ""
+    twitter: ""
+    instagram: ""
+    linkedin: ""
+    youtube: ""
+
+markup:
+  goldmark:
+    renderer:
+      unsafe: true

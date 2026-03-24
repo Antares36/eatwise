@@ -1,0 +1,72 @@
+{{ define "main" }}
+<section class="hero">
+  <div class="container">
+    <img src="/images/logo-with-text.png" alt="EATWISE" class="hero-logo">
+    <p class="hero-subtitle">{{ site.Params.description }}</p>
+    <a href="{{ "about/" | relLangURL }}" class="btn btn-primary">
+      {{ if eq .Language.Lang "el" }}Μάθετε Περισσότερα{{ else }}Learn More{{ end }}
+    </a>
+  </div>
+</section>
+
+<section class="home-section">
+  <div class="container">
+    <h2>{{ if eq .Language.Lang "el" }}Τι είναι το EATWISE;{{ else }}What is EATWISE?{{ end }}</h2>
+    <p>
+      {{ if eq .Language.Lang "el" }}
+        Το EATWISE (Waste Not, Educate All) είναι ένα ερευνητικό πρόγραμμα του Χαροκοπείου Πανεπιστημίου που στοχεύει στη γεφύρωση του χάσματος μεταξύ επιστημονικής έρευνας και δημόσιας εκπαίδευσης, προωθώντας βιώσιμες διατροφικές συνήθειες και τη μείωση της σπατάλης τροφίμων σε επίπεδο καταναλωτή.
+      {{ else }}
+        EATWISE (Waste Not, Educate All) is a research programme by Harokopio University that aims to bridge the gap between scientific research and public education, promoting sustainable food consumption habits and reducing food waste at the consumer level.
+      {{ end }}
+    </p>
+  </div>
+</section>
+
+<section class="home-section wp-section">
+  <div class="container">
+    <h2>{{ if eq .Language.Lang "el" }}Πακέτα Εργασίας{{ else }}Work Packages{{ end }}</h2>
+    <div class="wp-grid">
+      <div class="wp-card wp1">
+        <h3>WP1</h3>
+        <p>{{ if eq .Language.Lang "el" }}Προσδιορισμός & Τμηματοποίηση Ομάδων-Στόχου{{ else }}Target Group Identification & Segmentation{{ end }}</p>
+      </div>
+      <div class="wp-card wp2">
+        <h3>WP2</h3>
+        <p>{{ if eq .Language.Lang "el" }}Σχεδιασμός Εκπαιδευτικών Προγραμμάτων{{ else }}Education & Communication Programme Design{{ end }}</p>
+      </div>
+      <div class="wp-card wp3">
+        <h3>WP3</h3>
+        <p>{{ if eq .Language.Lang "el" }}Υλοποίηση Προγραμμάτων{{ else }}Programme Implementation{{ end }}</p>
+      </div>
+      <div class="wp-card wp4">
+        <h3>WP4</h3>
+        <p>{{ if eq .Language.Lang "el" }}Αξιολόγηση & Ανατροφοδότηση{{ else }}Evaluation & Feedback{{ end }}</p>
+      </div>
+      <div class="wp-card wp5">
+        <h3>WP5</h3>
+        <p>{{ if eq .Language.Lang "el" }}Διαχείριση & Διάδοση{{ else }}Management & Dissemination{{ end }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="home-section">
+  <div class="container">
+    <h2>{{ if eq .Language.Lang "el" }}Στόχοι{{ else }}Objectives{{ end }}</h2>
+    <div class="objectives-grid">
+      <div class="objective-card">
+        <h3>{{ if eq .Language.Lang "el" }}Μείωση Σπατάλης Τροφίμων{{ else }}Reduce Food Waste{{ end }}</h3>
+        <p>{{ if eq .Language.Lang "el" }}Προώθηση αλλαγών συμπεριφοράς για τη μείωση της σπατάλης τροφίμων σε επίπεδο καταναλωτή.{{ else }}Promoting behavioural change to reduce food waste at the consumer level.{{ end }}</p>
+      </div>
+      <div class="objective-card">
+        <h3>{{ if eq .Language.Lang "el" }}Βιώσιμη Διατροφή{{ else }}Sustainable Diet{{ end }}</h3>
+        <p>{{ if eq .Language.Lang "el" }}Ενίσχυση υγιεινών και βιώσιμων διατροφικών συνηθειών.{{ else }}Fostering healthy and sustainable dietary habits.{{ end }}</p>
+      </div>
+      <div class="objective-card">
+        <h3>{{ if eq .Language.Lang "el" }}Εκπαίδευση{{ else }}Education{{ end }}</h3>
+        <p>{{ if eq .Language.Lang "el" }}Γεφύρωση επιστημονικής έρευνας και δημόσιας ευαισθητοποίησης.{{ else }}Bridging scientific research and public awareness.{{ end }}</p>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}
