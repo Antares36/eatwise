@@ -6,13 +6,15 @@ defaultContentLanguageInSubdir: false
 
 languages:
   el:
-    languageName: "Ελληνικά"
+    languageName: "ΕΛ"
     languageCode: "el"
     contentDir: "content/el"
     weight: 1
     title: "EATWISE"
     params:
-      description: "Εκπαίδευση κατά της Σπατάλης: Προώθηση Αλλαγών Συμπεριφοράς για την Υγιή και Βιώσιμη Κατανάλωση Τροφίμων & τη Μείωση των Αποβλήτων Τροφίμων"
+      description: "Εκπαίδευση κατά της Σπατάλης: Προώθηση Αλλαγών Συμπεριφοράς για την Υγιή και Βιώσιμη Κατανάλωση Τροφίμων και τη Μείωση των Αποβλήτων Τροφίμων"
+      funding: "Το Έργο με τίτλο «Εκπαίδευση κατά της Σπατάλης: Προώθηση Αλλαγών Συμπεριφοράς για την Υγιή και Βιώσιμη Κατανάλωση Τροφίμων και τη Μείωση των Αποβλήτων Τροφίμων - EATWISE» υλοποιείται στο πλαίσιο της 6ης Προκήρυξης της Δράσης του ΕΛ.ΙΔ.Ε.Κ. «Επιστήμη και Κοινωνία» με τίτλο «Σύγχρονη Διατροφική Συνείδηση» (Αριθμός Έργου ΕΛ.ΙΔ.Ε.Κ.: 29364)."
+      implementedBy: "Φορέας υλοποίησης: Χαροκόπειο Πανεπιστήμιο"
     menus:
       main:
         - name: "Αρχική"
@@ -37,13 +39,15 @@ languages:
           pageRef: "/contact/"
           weight: 7
   en:
-    languageName: "English"
+    languageName: "EN"
     languageCode: "en"
     contentDir: "content/en"
     weight: 2
     title: "EATWISE"
     params:
       description: "Waste Not, Educate All: Promoting Behavioural Change for Healthy and Sustainable Food Consumption and Food Waste Prevention"
+      funding: "The project “Waste Not, Educate All: Promoting Behavioural Change for Healthy and Sustainable Food Consumption and Food Waste Prevention - EATWISE” is implemented in the framework of H.F.R.I.’s 6th Call of “Science and Society” Action entitled “Current Nutritional Awareness” (H.F.R.I. Project Number: 29364)."
+      implementedBy: "Implemented by: Harokopio University"
     menus:
       main:
         - name: "Home"
@@ -64,20 +68,18 @@ languages:
         - name: "Press Corner"
           pageRef: "/press/"
           weight: 6
-        - name: "Contact"
+        - name: "Contact Us"
           pageRef: "/contact/"
           weight: 7
 
 params:
   email: "eatwise@hua.gr"
   university: "Harokopio University"
-  funding: "Funded by the Hellenic Foundation for Research and Innovation (HFRI)"
+  projectNumber: "29364"
   social:
-    facebook: ""
-    twitter: ""
-    instagram: ""
-    linkedin: ""
-    youtube: ""
+    facebook: "#"
+    instagram: "#"
+    linkedin: "#"
 
 markup:
   goldmark:

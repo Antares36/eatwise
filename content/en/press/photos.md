@@ -1,7 +1,9 @@
 ---
 title: "Photos"
-description: "Photo gallery"
+description: "Approved photographs from the project’s activities"
 weight: 3
 ---
 
-<div class="placeholder-notice">Content under construction.</div>
+Approved photographs from the project’s activities, events and educational initiatives.
+
+<div class="placeholder-notice">Photos will be added soon.</div>

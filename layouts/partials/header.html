@@ -2,26 +2,20 @@
   <div class="top-bar">
     <div class="container">
       <div class="social-links">
-        {{ with site.Params.social.facebook }}<a href="{{ . }}" target="_blank" rel="noopener" aria-label="Facebook">FB</a>{{ end }}
-        {{ with site.Params.social.twitter }}<a href="{{ . }}" target="_blank" rel="noopener" aria-label="Twitter">X</a>{{ end }}
-        {{ with site.Params.social.instagram }}<a href="{{ . }}" target="_blank" rel="noopener" aria-label="Instagram">IG</a>{{ end }}
-        {{ with site.Params.social.linkedin }}<a href="{{ . }}" target="_blank" rel="noopener" aria-label="LinkedIn">LI</a>{{ end }}
-        {{ with site.Params.social.youtube }}<a href="{{ . }}" target="_blank" rel="noopener" aria-label="YouTube">YT</a>{{ end }}
+        {{ with site.Params.social.facebook }}<a href="{{ . }}" target="_blank" rel="noopener" aria-label="Facebook">{{ partial "icons/facebook.html" . }}</a>{{ end }}
+        {{ with site.Params.social.instagram }}<a href="{{ . }}" target="_blank" rel="noopener" aria-label="Instagram">{{ partial "icons/instagram.html" . }}</a>{{ end }}
+        {{ with site.Params.social.linkedin }}<a href="{{ . }}" target="_blank" rel="noopener" aria-label="LinkedIn">{{ partial "icons/linkedin.html" . }}</a>{{ end }}
       </div>
       <div class="lang-switch">
+        {{ partial "icons/globe.html" . }}
         {{ range site.Languages }}
           {{ if eq .Lang $.Language.Lang }}
             <span class="active">{{ .LanguageName }}</span>
           {{ else }}
-            {{ with $.Translations }}
-              {{ range . }}
-                {{ if eq .Language.Lang $.Language.Lang | not }}
-                  <a href="{{ .RelPermalink }}">{{ .Language.LanguageName }}</a>
-                {{ end }}
-              {{ end }}
-            {{ else }}
-              <a href="/{{ .Lang }}/">{{ .LanguageName }}</a>
-            {{ end }}
+            {{ $target := "" }}
+            {{ range $.Translations }}{{ $target = .RelPermalink }}{{ end }}
+            {{ if not $target }}{{ $target = printf "/%s/" .Lang | relLangURL }}{{ end }}
+            <a href="{{ $target }}">{{ .LanguageName }}</a>
           {{ end }}
         {{ end }}
       </div>
@@ -31,7 +25,7 @@
   <nav class="main-nav">
     <div class="container">
       <a href="{{ "/" | relLangURL }}" class="logo">
-        <img src="{{ "images/logo.jpg" | relURL }}" alt="EatWise Logo" width="50" height="50">
+        <img src="{{ "images/logo.png" | relURL }}" alt="EatWise Logo" width="48" height="48">
         <span>EATWISE</span>
       </a>
       <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false">
@@ -39,10 +33,21 @@
       </button>
       <ul class="nav-links">
         {{ range site.Menus.main }}
-          <li>
+          {{ $section := site.GetPage .PageRef }}
+          {{ $children := slice }}
+          {{ with $section }}{{ $children = .RegularPages }}{{ end }}
+          <li class="{{ if gt (len $children) 0 }}has-dropdown{{ end }}">
             <a href="{{ .URL }}"{{ if $.IsMenuCurrent "main" . }} class="active"{{ end }}>
               {{ .Name }}
+              {{ if gt (len $children) 0 }}<span class="caret" aria-hidden="true">▾</span>{{ end }}
             </a>
+            {{ if gt (len $children) 0 }}
+              <ul class="dropdown">
+                {{ range $children.ByWeight }}
+                  <li><a href="{{ .RelPermalink }}">{{ .Title }}</a></li>
+                {{ end }}
+              </ul>
+            {{ end }}
           </li>
         {{ end }}
       </ul>

@@ -1,0 +1,58 @@
+{{ define "main" }}
+{{ $el := eq .Language.Lang "el" }}
+<section class="page-content">
+  <div class="container">
+    <h1>{{ .Title }}</h1>
+    <div class="contact-layout">
+      <div class="contact-intro">
+        {{ .Content }}
+        <p class="contact-email">
+          <strong>{{ if $el }}Email{{ else }}Email{{ end }}:</strong>
+          <a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a>
+        </p>
+
+        <h2>{{ if $el }}Κοινωνικά Δίκτυα{{ else }}Social Media{{ end }}</h2>
+        <p>{{ if $el }}Επισκεφθείτε τις σελίδες του έργου στα social media:{{ else }}Follow the project on social media:{{ end }}</p>
+        <div class="contact-social">
+          {{ with site.Params.social.facebook }}<a href="{{ . }}" target="_blank" rel="noopener" aria-label="Facebook">{{ partial "icons/facebook.html" . }} Facebook</a>{{ end }}
+          {{ with site.Params.social.instagram }}<a href="{{ . }}" target="_blank" rel="noopener" aria-label="Instagram">{{ partial "icons/instagram.html" . }} Instagram</a>{{ end }}
+          {{ with site.Params.social.linkedin }}<a href="{{ . }}" target="_blank" rel="noopener" aria-label="LinkedIn">{{ partial "icons/linkedin.html" . }} LinkedIn</a>{{ end }}
+        </div>
+      </div>
+
+      <div class="contact-form-wrap">
+        <h2>{{ if $el }}Φόρμα Επικοινωνίας{{ else }}Contact Form{{ end }}</h2>
+        <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+          <div class="form-group">
+            <label for="name">{{ if $el }}Ονοματεπώνυμο{{ else }}Full name{{ end }}</label>
+            <input type="text" id="name" name="name" required>
+          </div>
+          <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" id="email" name="email" required>
+          </div>
+          <div class="form-group">
+            <label for="role">{{ if $el }}Ιδιότητα ή φορέας{{ else }}Role or organisation{{ end }}</label>
+            <input type="text" id="role" name="role">
+          </div>
+          <div class="form-group">
+            <label for="subject">{{ if $el }}Θέμα{{ else }}Subject{{ end }}</label>
+            <input type="text" id="subject" name="subject" required>
+          </div>
+          <div class="form-group">
+            <label for="message">{{ if $el }}Μήνυμα{{ else }}Message{{ end }}</label>
+            <textarea id="message" name="message" required></textarea>
+          </div>
+          <div class="form-group form-consent">
+            <label>
+              <input type="checkbox" name="consent" required>
+              {{ if $el }}Συγκατάθεση για την επεξεργασία των στοιχείων επικοινωνίας{{ else }}Consent to the processing of contact details{{ end }}
+            </label>
+          </div>
+          <button type="submit" class="btn btn-primary">{{ if $el }}Αποστολή{{ else }}Send{{ end }}</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</section>
+{{ end }}

@@ -2,28 +2,42 @@
   <div class="container">
     <div class="footer-grid">
       <div class="footer-col">
-        <img src="{{ "images/logo.jpg" | relURL }}" alt="EatWise" width="80" height="80">
+        <img src="{{ "images/logo.png" | relURL }}" alt="EatWise" width="72" height="72">
         <p class="footer-tagline">EATWISE</p>
+        <p class="footer-implemented">{{ site.Params.implementedBy }}</p>
       </div>
       <div class="footer-col">
         <h4>{{ if eq .Language.Lang "el" }}Επικοινωνία{{ else }}Contact{{ end }}</h4>
         <p><a href="mailto:{{ site.Params.email }}">{{ site.Params.email }}</a></p>
         <p>{{ site.Params.university }}</p>
-      </div>
-      <div class="footer-col">
-        <h4>{{ if eq .Language.Lang "el" }}Ακολουθήστε μας{{ else }}Follow Us{{ end }}</h4>
         <div class="footer-social">
-          {{ with site.Params.social.facebook }}<a href="{{ . }}" target="_blank" rel="noopener">Facebook</a>{{ end }}
-          {{ with site.Params.social.instagram }}<a href="{{ . }}" target="_blank" rel="noopener">Instagram</a>{{ end }}
-          {{ with site.Params.social.twitter }}<a href="{{ . }}" target="_blank" rel="noopener">X / Twitter</a>{{ end }}
-          {{ with site.Params.social.linkedin }}<a href="{{ . }}" target="_blank" rel="noopener">LinkedIn</a>{{ end }}
-          {{ with site.Params.social.youtube }}<a href="{{ . }}" target="_blank" rel="noopener">YouTube</a>{{ end }}
+          {{ with site.Params.social.facebook }}<a href="{{ . }}" target="_blank" rel="noopener" aria-label="Facebook">{{ partial "icons/facebook.html" . }}</a>{{ end }}
+          {{ with site.Params.social.instagram }}<a href="{{ . }}" target="_blank" rel="noopener" aria-label="Instagram">{{ partial "icons/instagram.html" . }}</a>{{ end }}
+          {{ with site.Params.social.linkedin }}<a href="{{ . }}" target="_blank" rel="noopener" aria-label="LinkedIn">{{ partial "icons/linkedin.html" . }}</a>{{ end }}
         </div>
       </div>
+      <div class="footer-col">
+        <h4>{{ if eq .Language.Lang "el" }}Πληροφορίες{{ else }}Information{{ end }}</h4>
+        <ul class="footer-links">
+          {{ if eq .Language.Lang "el" }}
+            <li><a href="{{ "legal/privacy/" | relLangURL }}">Πολιτική Απορρήτου</a></li>
+            <li><a href="{{ "legal/terms/" | relLangURL }}">Όροι Χρήσης</a></li>
+            <li><a href="{{ "legal/cookies/" | relLangURL }}">Πολιτική Cookies</a></li>
+            <li><a href="{{ "legal/accessibility/" | relLangURL }}">Δήλωση Προσβασιμότητας</a></li>
+          {{ else }}
+            <li><a href="{{ "legal/privacy/" | relLangURL }}">Privacy Policy</a></li>
+            <li><a href="{{ "legal/terms/" | relLangURL }}">Terms of Use</a></li>
+            <li><a href="{{ "legal/cookies/" | relLangURL }}">Cookies Policy</a></li>
+            <li><a href="{{ "legal/accessibility/" | relLangURL }}">Accessibility Statement</a></li>
+          {{ end }}
+        </ul>
+      </div>
     </div>
+
     <div class="footer-funding">
       <p>{{ site.Params.funding }}</p>
     </div>
+
     <div class="footer-bottom">
       <p>&copy; {{ now.Year }} EATWISE &ndash; {{ site.Params.university }}</p>
     </div>
@@ -36,5 +50,14 @@
     const expanded = this.getAttribute('aria-expanded') === 'true';
     this.setAttribute('aria-expanded', !expanded);
     nav.classList.toggle('open');
+  });
+  // Mobile: tap a dropdown parent to expand its submenu
+  document.querySelectorAll('.has-dropdown > a').forEach(function(link) {
+    link.addEventListener('click', function(e) {
+      if (window.innerWidth <= 768) {
+        e.preventDefault();
+        this.parentElement.classList.toggle('open');
+      }
+    });
   });
 </script>

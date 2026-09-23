@@ -1,15 +1,6 @@
 ---
 title: "Contact Us"
-description: "Get in touch with us"
+description: "Get in touch with the EATWISE team"
 ---
 
-## Contact Details
-
-**Email:** [eatwise@hua.gr](mailto:eatwise@hua.gr)
-
-**Harokopio University**
-El. Venizelou 70, 176 76, Kallithea, Athens, Greece
-
-## Contact Form
-
-<div class="placeholder-notice">The contact form will be available soon.</div>
+Would you like to learn more about EATWISE, use the educational resources, propose a collaboration or contact the research team? Send us a message and we will get back to you as soon as possible.

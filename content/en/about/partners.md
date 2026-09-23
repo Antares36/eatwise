@@ -1,13 +1,19 @@
 ---
 title: "Collaborating Partners"
-description: "Organisations collaborating in the EATWISE project"
+description: "The organisations that co-create and strengthen the project"
 weight: 5
 ---
 
-EATWISE collaborates with key organisations in the fields of food waste prevention and healthy nutrition promotion:
+Collaborating partners contribute to the co-creation of resources and help translate research findings into practice, supporting the project’s continued relevance and use beyond the funding period.
 
-- **MEEN** — Mediterranean Environmental Education Network
-- **EFET** — Hellenic Food Authority
-- **BOROUME** — Saving Food, Saving Lives
+## Ministry of Environment and Energy
 
-<div class="placeholder-notice">More details and logos coming soon.</div>
+The competent authority for food waste prevention policy in Greece and a key stakeholder in circular economy policy and national monitoring of food waste.
+
+## Hellenic Food Authority (EFET)
+
+The national authority for food safety, with a critical role in informing consumers about food safety, labelling and proper food handling practices.
+
+## Boroume
+
+A Greek non-profit organisation dedicated to rescuing and redistributing surplus food.

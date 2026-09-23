@@ -1,7 +1,9 @@
 ---
 title: "Scientific Publications"
-description: "Publications from the research team"
+description: "Publications, reports and research findings from the team"
 weight: 1
 ---
 
-<div class="placeholder-notice">Content under construction.</div>
+Here you will find scientific publications, reports and research findings from the Harokopio University team and related projects.
+
+<div class="placeholder-notice">The list of publications will be added soon.</div>

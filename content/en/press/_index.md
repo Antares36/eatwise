@@ -1,6 +1,8 @@
 ---
 title: "Press Corner"
-description: "Press releases, media coverage and photos"
+description: "News, resources and stories from EATWISE"
 ---
 
-Press releases, media coverage and photographic material.
+## News, resources and stories from EATWISE
+
+The Press Corner includes project news, press releases, media coverage, photographs and selected resources for media representatives and collaborating organisations.

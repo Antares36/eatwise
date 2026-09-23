@@ -1,7 +1,9 @@
 ---
 title: "Press Releases"
-description: "EATWISE press releases"
+description: "Official news, announcements and key project milestones"
 weight: 1
 ---
 
-<div class="placeholder-notice">Content under construction.</div>
+Official news, announcements and key project milestones.
+
+<div class="placeholder-notice">Press releases will be added soon.</div>

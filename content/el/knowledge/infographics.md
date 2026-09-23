@@ -1,7 +1,9 @@
 ---
 title: "Infographics"
-description: "Οπτικό υλικό και infographics"
+description: "Σύντομα, τεκμηριωμένα και εύχρηστα γραφικά"
 weight: 2
 ---
 
-<div class="placeholder-notice">Περιεχόμενο υπό κατασκευή.</div>
+Σύντομα, τεκμηριωμένα και εύχρηστα γραφικά για βασικά δεδομένα, έννοιες και πρακτικές που συνδέονται με τη σπατάλη τροφίμων και τη βιώσιμη διατροφή.
+
+<div class="placeholder-notice">Τα infographics θα προστεθούν σύντομα.</div>
