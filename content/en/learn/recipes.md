@@ -1,5 +1,5 @@
 ---
-title: "Zero Food Waste Recipes"
+title: "Zero food waste recipes"
 description: "Give leftovers a new place on the table"
 weight: 5
 ---

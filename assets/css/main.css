@@ -14,6 +14,7 @@
   --bg-light: #f7f9f8;
   --yellow: #f5c842;        /* from logo apple */
   --border: #e0e0e0;
+  --palette-gradient: linear-gradient(90deg, #EEA1A1, #F5CBAF, #E9D597, #C7EA93, #4AE8C8);
 }
 
 /* === Reset & Base === */
@@ -89,7 +90,8 @@ img {
 /* === Main Navigation === */
 .main-nav {
   background: var(--bg);
-  border-bottom: 2px solid var(--primary-light);
+  border-bottom: 3px solid var(--primary-light);
+  border-image: var(--palette-gradient) 1;
   padding: 0.5rem 0;
   position: sticky;
   top: 0;
@@ -113,7 +115,8 @@ img {
 }
 
 .logo img {
-  border-radius: 6px;
+  height: 44px;
+  width: auto;
 }
 
 .nav-links {
@@ -348,7 +351,7 @@ img {
   display: block;
   position: relative;
   border: 1px solid var(--border);
-  border-left: 4px solid var(--primary-light);
+  border-left: 5px solid var(--card-accent, var(--primary-light));
   padding: 1.25rem 3rem 1.25rem 1.25rem;
   margin-bottom: 1rem;
   border-radius: 0 8px 8px 0;
@@ -359,8 +362,7 @@ img {
 
 .child-page-card:hover,
 .child-page-card:focus-visible {
-  background: var(--bg-light);
-  border-left-color: var(--primary);
+  background: color-mix(in srgb, var(--card-accent, var(--primary-light)) 12%, #ffffff);
   box-shadow: 0 4px 14px rgba(0,0,0,0.12);
   transform: translateX(4px);
   color: inherit;
@@ -388,8 +390,9 @@ img {
   top: 50%;
   right: 1.25rem;
   transform: translateY(-50%);
-  font-size: 1.4rem;
-  color: var(--primary-light);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--card-accent, var(--primary-light));
   opacity: 0;
   transition: opacity 0.2s, transform 0.2s, right 0.2s;
 }
@@ -490,6 +493,8 @@ img {
   color: #ccc;
   padding: 2.5rem 0 0;
   margin-top: 3rem;
+  border-top: 4px solid var(--primary-light);
+  border-image: var(--palette-gradient) 1;
 }
 
 .footer-grid {
@@ -540,7 +545,8 @@ img {
 }
 
 .footer-col img {
-  border-radius: 8px;
+  height: 68px;
+  width: auto;
 }
 
 /* === Placeholder notice for skeleton pages === */
@@ -663,24 +669,61 @@ img {
 .stats-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-  gap: 1.25rem;
-  margin-top: 1rem;
+  gap: 1.5rem;
+  margin-top: 2rem;
 }
 .stat-card {
   background: var(--bg);
-  border-radius: 10px;
-  padding: 1.75rem 1.25rem;
+  border-radius: 14px;
+  padding: 2rem 1.25rem 1.75rem;
   text-align: center;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.06);
-  border-top: 4px solid var(--primary-light);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.06);
+  border-top: 5px solid var(--accent, var(--primary-light));
 }
-.stat-value {
-  font-size: 1.8rem;
+
+/* Circular visual shared frame */
+.stat-visual {
+  position: relative;
+  width: 132px;
+  height: 132px;
+  margin: 0 auto 1.25rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Donut ring for percentage stats */
+.donut { width: 132px; height: 132px; transform: rotate(-90deg); }
+.donut-track { fill: none; stroke: #e9edec; stroke-width: 13; }
+.donut-ring {
+  fill: none;
+  stroke: var(--accent, var(--primary));
+  stroke-width: 13;
+  stroke-linecap: round;
+}
+.donut-label {
+  position: absolute;
+  font-size: 1.5rem;
   font-weight: 800;
-  color: var(--primary);
-  margin-bottom: 0.5rem;
-  line-height: 1.15;
+  color: var(--primary-dark);
 }
+
+/* Solid disc for amount stats */
+.amount-disc {
+  width: 132px;
+  height: 132px;
+  border-radius: 50%;
+  background: color-mix(in srgb, var(--accent) 20%, #ffffff);
+  border: 7px solid var(--accent);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 0.5rem;
+}
+.amount-value { font-size: 2.1rem; font-weight: 800; color: var(--primary-dark); line-height: 1; }
+.amount-unit { font-size: 0.78rem; color: var(--text-light); margin-top: 0.25rem; }
+
 .stat-text { font-size: 0.92rem; color: var(--text-light); margin: 0; }
 
 /* --- Contact layout --- */
@@ -718,4 +761,35 @@ img {
   max-width: 900px;
   margin: 0 auto;
   line-height: 1.5;
+}
+
+/* ============================================================
+   Mobile polish
+   ============================================================ */
+@media (max-width: 600px) {
+  .hero { padding: 2.5rem 0; }
+  .hero-logo { max-width: 150px; }
+  .hero-tagline { font-size: 1.5rem; }
+
+  .home-intro { padding: 2rem 0; }
+  .intro-prose { font-size: 1rem; }
+  .home-section { padding: 2.5rem 0; }
+  .home-section h2 { font-size: 1.5rem; }
+
+  /* Full-width stacked CTA buttons */
+  .cta-row { flex-direction: column; align-items: stretch; }
+  .cta-row .btn { width: 100%; text-align: center; }
+
+  .page-content { padding: 2rem 0; }
+  .page-content h1 { font-size: 1.6rem; }
+  .page-content h2 { font-size: 1.3rem; }
+
+  .stat-card { padding: 1.75rem 1rem 1.5rem; }
+
+  .footer-grid { gap: 1.5rem; text-align: left; }
+  .footer-funding p { font-size: 0.85rem; }
+
+  /* Slightly smaller circular visuals on very small screens */
+  .stat-visual, .donut, .amount-disc { width: 120px; height: 120px; }
+  .amount-value { font-size: 1.9rem; }
 }

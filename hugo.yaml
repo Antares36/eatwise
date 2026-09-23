@@ -20,16 +20,16 @@ languages:
         - name: "Αρχική"
           pageRef: "/"
           weight: 1
-        - name: "Σχετικά με το Έργο"
+        - name: "Σχετικά με το έργο"
           pageRef: "/about/"
           weight: 2
         - name: "Μάθε & Δράσε"
           pageRef: "/learn/"
           weight: 3
-        - name: "Για Εκπαιδευτικούς"
+        - name: "Για εκπαιδευτικούς"
           pageRef: "/educators/"
           weight: 4
-        - name: "Κέντρο Γνώσης"
+        - name: "Κέντρο γνώσης"
           pageRef: "/knowledge/"
           weight: 5
         - name: "Press Corner"
@@ -59,7 +59,7 @@ languages:
         - name: "Learn & Take Action"
           pageRef: "/learn/"
           weight: 3
-        - name: "For Educators"
+        - name: "For educators"
           pageRef: "/educators/"
           weight: 4
         - name: "Knowledge Hub"
@@ -68,7 +68,7 @@ languages:
         - name: "Press Corner"
           pageRef: "/press/"
           weight: 6
-        - name: "Contact Us"
+        - name: "Contact us"
           pageRef: "/contact/"
           weight: 7
 

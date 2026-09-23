@@ -1,5 +1,5 @@
 ---
-title: "What You Will Find on the Platform"
+title: "What you will find on the platform"
 description: "An open hub for knowledge and action"
 weight: 3
 ---

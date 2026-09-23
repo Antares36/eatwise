@@ -1,5 +1,5 @@
 ---
-title: "Contact Us"
+title: "Contact us"
 description: "Get in touch with the EATWISE team"
 ---
 

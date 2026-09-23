@@ -1,5 +1,5 @@
 ---
-title: "Collaborating Partners"
+title: "Collaborating partners"
 description: "The organisations that co-create and strengthen the project"
 weight: 5
 ---

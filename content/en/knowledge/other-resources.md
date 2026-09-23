@@ -1,5 +1,5 @@
 ---
-title: "Resources from Other Projects"
+title: "Resources from other projects"
 description: "Useful resources from previous and ongoing research projects"
 weight: 4
 ---

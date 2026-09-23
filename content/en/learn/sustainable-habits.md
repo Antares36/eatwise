@@ -1,5 +1,5 @@
 ---
-title: "Sustainable Dietary Habits"
+title: "Sustainable dietary habits"
 description: "A flexible way of eating that supports health"
 weight: 2
 ---

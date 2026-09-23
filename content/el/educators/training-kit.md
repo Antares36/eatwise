@@ -1,5 +1,5 @@
 ---
-title: "Training Kit"
+title: "Training kit"
 description: "Η αλλαγή μαθαίνεται, καλλιεργείται και μεταδίδεται"
 weight: 1
 ---

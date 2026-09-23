@@ -1,5 +1,5 @@
 ---
-title: "For Educators"
+title: "For educators"
 description: "The EATWISE Training Kit and Course Module for the education community"
 ---
 

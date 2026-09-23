@@ -1,5 +1,5 @@
 ---
-title: "Για Εκπαιδευτικούς"
+title: "Για εκπαιδευτικούς"
 description: "Το EATWISE Training Kit και το Course Module για την εκπαιδευτική κοινότητα"
 ---
 

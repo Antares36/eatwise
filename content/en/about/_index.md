@@ -1,5 +1,5 @@
 ---
-title: "About the Project"
+title: "About"
 description: "Get to know the EATWISE research project"
 ---
 

@@ -1,5 +1,5 @@
 ---
-title: "Food Storage Tips"
+title: "Food storage tips"
 description: "Appropriate storage keeps food safe and good for longer"
 weight: 4
 ---

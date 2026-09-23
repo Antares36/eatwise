@@ -1,5 +1,5 @@
 ---
-title: "Press Releases"
+title: "Press releases"
 description: "Official news, announcements and key project milestones"
 weight: 1
 ---

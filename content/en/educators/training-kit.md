@@ -1,5 +1,5 @@
 ---
-title: "Training Kit"
+title: "Training kit"
 description: "Change can be learned, cultivated and shared"
 weight: 1
 ---

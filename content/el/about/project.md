@@ -1,5 +1,5 @@
 ---
-title: "Το Έργο EATWISE"
+title: "Το έργο EATWISE"
 description: "Η επιστήμη στο τραπέζι της καθημερινότητας"
 weight: 1
 ---

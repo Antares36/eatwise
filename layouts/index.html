@@ -25,8 +25,24 @@
     <h2>{{ $.Params.stats_heading }}</h2>
     <div class="stats-grid">
       {{ range . }}
-        <div class="stat-card">
-          <div class="stat-value">{{ .value }}</div>
+        <div class="stat-card" style="--accent: {{ .accent }};">
+          <div class="stat-visual">
+            {{ if eq .kind "donut" }}
+              {{ $c := 326.726 }}
+              {{ $off := mul $c (sub 1.0 (div (float .percent) 100.0)) }}
+              <svg class="donut" viewBox="0 0 120 120" role="img" aria-label="{{ .label }}">
+                <circle class="donut-track" cx="60" cy="60" r="52"></circle>
+                <circle class="donut-ring" cx="60" cy="60" r="52"
+                  style="stroke-dasharray: {{ $c }}; stroke-dashoffset: {{ $off }};"></circle>
+              </svg>
+              <span class="donut-label">{{ .label }}</span>
+            {{ else }}
+              <div class="amount-disc">
+                <span class="amount-value">{{ .value }}</span>
+                <span class="amount-unit">{{ .unit }}</span>
+              </div>
+            {{ end }}
+          </div>
           <p class="stat-text">{{ .text }}</p>
         </div>
       {{ end }}

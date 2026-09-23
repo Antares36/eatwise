@@ -1,5 +1,5 @@
 ---
-title: "Media Coverage"
+title: "Media coverage"
 description: "Interviews, articles, reports and media features"
 weight: 2
 ---

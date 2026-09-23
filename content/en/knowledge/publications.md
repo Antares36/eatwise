@@ -1,5 +1,5 @@
 ---
-title: "Scientific Publications"
+title: "Scientific publications"
 description: "Publications, reports and research findings from the team"
 weight: 1
 ---

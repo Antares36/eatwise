@@ -1,5 +1,5 @@
 ---
-title: "The EATWISE Project"
+title: "EATWISE Project"
 description: "Bringing science to everyday food choices"
 weight: 1
 ---

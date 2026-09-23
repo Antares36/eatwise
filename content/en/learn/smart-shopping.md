@@ -1,5 +1,5 @@
 ---
-title: "Smart Food Shopping"
+title: "Smart food shopping"
 description: "Smart food shopping starts before entering the shop"
 weight: 3
 ---
