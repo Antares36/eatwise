@@ -4,10 +4,11 @@
     <h1>{{ .Title }}</h1>
     {{ .Content }}
     {{ range .Pages }}
-    <div class="child-page-card">
-      <h3><a href="{{ .RelPermalink }}">{{ .Title }}</a></h3>
+    <a class="child-page-card" href="{{ .RelPermalink }}">
+      <h3>{{ .Title }}</h3>
       {{ with .Description }}<p>{{ . }}</p>{{ end }}
-    </div>
+      <span class="card-arrow" aria-hidden="true">→</span>
+    </a>
     {{ end }}
   </div>
 </section>
