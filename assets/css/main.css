@@ -793,3 +793,52 @@ img {
   .stat-visual, .donut, .amount-disc { width: 120px; height: 120px; }
   .amount-value { font-size: 1.9rem; }
 }
+
+/* ============================================================
+   Linked team + partner cards
+   ============================================================ */
+a.team-card,
+a.partner-card {
+  display: flex;
+  flex-direction: column;
+  color: inherit;
+  border-top: 4px solid var(--link-accent, var(--primary-light));
+  transition: background 0.2s, box-shadow 0.2s, transform 0.2s;
+}
+a.team-card:hover, a.team-card:focus-visible,
+a.partner-card:hover, a.partner-card:focus-visible {
+  color: inherit;
+  background: color-mix(in srgb, var(--link-accent, var(--primary-light)) 14%, #ffffff);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.10);
+  transform: translateY(-3px);
+  outline: none;
+}
+.team-grid > a:nth-child(5n+1), .partner-grid > a:nth-child(5n+1) { --link-accent: #4AE8C8; }
+.team-grid > a:nth-child(5n+2), .partner-grid > a:nth-child(5n+2) { --link-accent: #C7EA93; }
+.team-grid > a:nth-child(5n+3), .partner-grid > a:nth-child(5n+3) { --link-accent: #E9D597; }
+.team-grid > a:nth-child(5n+4), .partner-grid > a:nth-child(5n+4) { --link-accent: #F5CBAF; }
+.team-grid > a:nth-child(5n+5), .partner-grid > a:nth-child(5n+5) { --link-accent: #EEA1A1; }
+
+.team-link {
+  margin-top: auto;
+  padding-top: 0.75rem;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--primary);
+}
+a.team-card:hover .team-link,
+a.partner-card:hover .team-link { color: var(--primary-dark); }
+
+.partner-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+.partner-card {
+  background: var(--bg-light);
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+.partner-card h3 { margin: 0 0 0.6rem; color: var(--primary-dark); font-size: 1.15rem; }
+.partner-card p { color: var(--text-light); font-size: 0.95rem; margin: 0; }

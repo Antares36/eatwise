@@ -77,9 +77,9 @@ params:
   university: "Harokopio University"
   projectNumber: "29364"
   social:
-    facebook: "#"
-    instagram: "#"
-    linkedin: "#"
+    facebook: "https://www.facebook.com/profile.php?id=61590822057047"
+    instagram: "https://www.instagram.com/eatwiseproject"
+    linkedin: "https://www.linkedin.com/company/eatwise-pr"
 
 markup:
   goldmark:

@@ -9,27 +9,32 @@ EATWISE is implemented by a multidisciplinary team from Harokopio University, wh
 ## Principal Investigator
 
 <div class="team-grid">
-  <div class="team-card">
+  <a class="team-card" href="https://geo.hua.gr/personnel/lazaridi-konstantia-aikaterini/" target="_blank" rel="noopener">
     <h3>Prof. Konstantia Aikaterini Lasaridi</h3>
     <p class="role">Principal Investigator (PI)</p>
-  </div>
+  <span class="team-link">HUA profile ↗</span>
+  </a>
 </div>
 
 ## Scientific Team
 
 <div class="team-grid">
-  <div class="team-card">
+  <a class="team-card" href="https://dnd.hua.gr/personnel/dimosthenis-panagiotakos/" target="_blank" rel="noopener">
     <h3>Prof. Demosthenes Panagiotakos</h3>
-  </div>
-  <div class="team-card">
+  <span class="team-link">HUA profile ↗</span>
+  </a>
+  <a class="team-card" href="https://desd.hua.gr/dep/kontastinos-abeliotis/" target="_blank" rel="noopener">
     <h3>Prof. Konstantinos Abeliotis</h3>
-  </div>
-  <div class="team-card">
+  <span class="team-link">HUA profile ↗</span>
+  </a>
+  <a class="team-card" href="https://dnd.hua.gr/personnel/adamantini-kyriakou/" target="_blank" rel="noopener">
     <h3>Prof. Adamantini Kyriakou</h3>
-  </div>
-  <div class="team-card">
+  <span class="team-link">HUA profile ↗</span>
+  </a>
+  <a class="team-card" href="https://desd.hua.gr/dep/christina-chroni/" target="_blank" rel="noopener">
     <h3>Assist. Prof. Christina Chroni</h3>
-  </div>
+  <span class="team-link">HUA profile ↗</span>
+  </a>
 </div>
 
 ## The Wider Team

@@ -9,27 +9,32 @@ weight: 4
 ## Επιστημονικά Υπεύθυνη
 
 <div class="team-grid">
-  <div class="team-card">
+  <a class="team-card" href="https://geo.hua.gr/personnel/lazaridi-konstantia-aikaterini/" target="_blank" rel="noopener">
     <h3>Καθ. Κωνσταντία-Αικατερίνη Λαζαρίδη</h3>
     <p class="role">Επιστημονικά Υπεύθυνη (PI)</p>
-  </div>
+  <span class="team-link">Προφίλ στο ΧΠ ↗</span>
+  </a>
 </div>
 
 ## Μέλη της Επιστημονικής Ομάδας
 
 <div class="team-grid">
-  <div class="team-card">
+  <a class="team-card" href="https://dnd.hua.gr/personnel/dimosthenis-panagiotakos/" target="_blank" rel="noopener">
     <h3>Καθ. Δημοσθένης Παναγιωτάκος</h3>
-  </div>
-  <div class="team-card">
+  <span class="team-link">Προφίλ στο ΧΠ ↗</span>
+  </a>
+  <a class="team-card" href="https://desd.hua.gr/dep/kontastinos-abeliotis/" target="_blank" rel="noopener">
     <h3>Καθ. Κωνσταντίνος Αμπελιώτης</h3>
-  </div>
-  <div class="team-card">
+  <span class="team-link">Προφίλ στο ΧΠ ↗</span>
+  </a>
+  <a class="team-card" href="https://dnd.hua.gr/personnel/adamantini-kyriakou/" target="_blank" rel="noopener">
     <h3>Καθ. Αδαμαντίνη Κυριακού</h3>
-  </div>
-  <div class="team-card">
+  <span class="team-link">Προφίλ στο ΧΠ ↗</span>
+  </a>
+  <a class="team-card" href="https://desd.hua.gr/dep/christina-chroni/" target="_blank" rel="noopener">
     <h3>Επίκ. Καθ. Χριστίνα Χρόνη</h3>
-  </div>
+  <span class="team-link">Προφίλ στο ΧΠ ↗</span>
+  </a>
 </div>
 
 ## Η Ευρύτερη Ομάδα
